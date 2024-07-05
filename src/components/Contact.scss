@@ -1,0 +1,132 @@
+@import '../App.scss';
+
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #192231;
+  color: white;
+  padding: 50px 20px;
+}
+
+.contactHeadings {
+  width: 100%;
+
+  @media screen and ($gtTablet){
+    max-width: 678px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    color: rgb(156, 163, 175);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+  }
+
+}
+
+.contactForm {
+  width: 100%;
+  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  grid-gap: 1rem; /* gap between the grid items */
+
+  @media screen and ($gtTablet){
+    max-width: 678px;
+  }
+
+  label {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+  }
+
+  p {
+    color: rgb(156, 163, 175);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+  }
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+input, select {
+  height: 36px;
+}
+
+input, select, textarea {
+  background-color: rgb(255 255 255 / 0.05);
+  border: solid 1px rgb(255 255 255 / 0.1);
+  border-radius: 8px;
+  outline: none;
+  padding: 0 10px;
+  color: white;
+  margin-top: 8px;
+  font-size: 14px;
+
+  &:focus {
+    border: solid 1px rgb(99 102 241);
+  }
+}
+
+textarea {
+  min-height: 72px;
+  padding: 10px;
+  max-width: 100%;
+  max-height: 300px;
+}
+
+
+.inputGroup.firstName,
+.inputGroup.lastName {
+  grid-column: span 2; /* Each takes 50% width (2 out of 4 columns) */
+}
+
+.inputGroup.email {
+  grid-column: span 3; /* Takes 75% width (3 out of 4 columns) */
+}
+
+.inputGroup.packageOption {
+  grid-column: span 3; /* Takes 50% width (2 out of 4 columns) */
+}
+
+.inputGroup.message {
+  grid-column: span 4; /* Takes 100% width (4 out of 4 columns) */
+}
+
+.errorMessage, .successMessage, .subHeading {
+  grid-column: span 4;
+}
+
+.submit {
+  grid-column: span 4; /* Takes 100% width (4 out of 4 columns) */
+  width: 150px;
+  border: solid 1px #2F3845;
+  border-radius: 8px;
+  padding: 15px;
+  outline: none;
+  min-height: 50px;
+
+  background-color: #fffafa;
+  color: #2F3845;
+  cursor: pointer;
+  margin: 20px 0 0 0;
+  font-size: 16px;
+  transition: all 0.3s;
+
+  &:hover, &:focus {
+    background-color: rgb(255 255 255 / 0.05);
+    color: white;
+  }
+}

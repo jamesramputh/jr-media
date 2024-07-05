@@ -1,0 +1,40 @@
+import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import "./Packages.scss"
+
+const Packages = ({packagesRef}) => {
+
+  return (
+    <div className="packagesContainer" ref={packagesRef}>
+
+      <div className="package">
+        <h2>Photos</h2>
+        <p className="message">This package includes HDR photos of interior and exterior.</p>
+        <span className="price">$199</span>
+        <p><FontAwesomeIcon icon="fa-solid fa-check" /> HDR Photos</p>
+      </div>
+
+      <div className="package">
+        <h2>Photos & Video</h2>
+        <p className="message">This package includes HDR photos of interior and exterior as well as 4K or 1080p video depending on your preference.</p>
+        <span className="price">$399</span>
+        <p><FontAwesomeIcon icon="fa-solid fa-check" /> HDR Photos</p>
+        <p><FontAwesomeIcon icon="fa-solid fa-check" /> 4K or 1080p Video</p>
+        <p><FontAwesomeIcon icon="fa-solid fa-check" /> Social media video</p>
+      </div>
+
+      <div className="package">
+        <h2>Photos, Video & Drone </h2>
+        <p className="message">This package includes everything that is offered in the photo and video package with the addition of aerial drone shots and video.</p>
+        <span className="price">$449</span>
+        <p><FontAwesomeIcon icon="fa-solid fa-check" /> HDR Photos</p>
+        <p><FontAwesomeIcon icon="fa-solid fa-check" /> 4K or 1080p Video</p>
+        <p><FontAwesomeIcon icon="fa-solid fa-check" /> Social media video</p>
+        <p><FontAwesomeIcon icon="fa-solid fa-check" /> Drone Photos & Video</p>
+      </div>
+
+    </div>
+  )
+}
+
+export { Packages }

@@ -1,0 +1,56 @@
+*{
+  box-sizing: border-box;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+
+// Media mixins
+$xs: "max-width: 400px";
+$mobile: "max-width: 767px";
+$gtMobile: "min-width: 768px";
+
+$ltDesktop: "max-width: 979px";
+$gtTablet: "min-width: 980px";
+
+$gtDesktop: "min-width: 1200px";
+$ltLarge: "max-width: 1199px";
+
+$normal: "min-width: 980px) and (max-width: 1199px";
+
+$small: "min-width: 768px) and (max-width: 979px";
+
+$large: "min-width: 1200px";
+
+
+$mainColor:  #23989b;
+$secondaryColor: #f0a433;
+
+@mixin image($filename_sans_ext, $ext, $background_size){
+  $file: '#{$filename_sans_ext}.#{$ext}';
+  background-image:url('./img/#{$file}');
+  background-size:$background_size;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+.appContainer {
+  position: relative;
+}
+
+.pageContainer {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.modalOverlay {
+  height: calc(100vh - 62px);
+  z-index: 5;
+  background: #192231;
+}

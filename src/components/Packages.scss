@@ -1,0 +1,55 @@
+@import '../App.scss';
+
+.packagesContainer {
+  margin: 20px 0 50px 0;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  column-gap: 2rem;
+  row-gap: 20px;
+  padding: 0 20px;
+
+  @media screen and ($gtMobile){
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 2rem;
+  }
+
+  @media screen and ($gtDesktop){
+    grid-template-columns: repeat(3, minmax(0, 370px));
+    margin: 50px 0;
+  }
+
+}
+
+.package {
+    border: solid 1px rgb(229 231 235);
+    padding: 2rem;
+    border-radius: 20px;
+    color: #464E5A;
+
+    h2 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 14px;
+
+      &.message {
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+
+    p > svg {
+      margin-right: 10px;
+    }
+}
+
+
+
+.price {
+  font-size: 34px;
+  font-weight: 900;
+  font-family: 'montserrat' , sans-serif;
+}

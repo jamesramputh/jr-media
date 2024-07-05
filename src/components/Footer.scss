@@ -1,0 +1,43 @@
+@import '../App.scss';
+
+
+@mixin image($filename_sans_ext, $ext, $background_size){
+  $file: '#{$filename_sans_ext}.#{$ext}';
+  background-image:url('../img/#{$file}');
+  background-size:$background_size;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+footer{
+  min-height: 100px;
+  padding: 25px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  width: 100%;
+  position: relative;
+  flex-direction: column;
+
+  @media($mobile){
+    flex-direction: column;
+    padding: 20px;
+    height: auto;
+  }
+
+  .footerNotes {
+    text-align: center;
+  }
+
+  .message{
+    display: flex;
+    align-items: center;
+    color: #464E5A;
+    margin-top: 10px;
+
+    svg {
+      margin: 0 7px;
+    }
+  }
+}
