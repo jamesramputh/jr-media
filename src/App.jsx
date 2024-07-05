@@ -24,7 +24,7 @@ function App() {
           contactRef={contactRef}
         />
       
-        <Hero contactRef={contactRef} packagesRef={packagesRef} />
+        <Hero scrollToRef={scrollToRef} packagesRef={packagesRef} />
         <Packages packagesRef={packagesRef} />
         <Contact contactRef={contactRef} />
 

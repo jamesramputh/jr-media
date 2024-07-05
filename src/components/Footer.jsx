@@ -9,7 +9,7 @@ const Footer = () => {
 
       <div className="footerNotes">
         <div className="message">
-          Made with <FontAwesomeIcon icon="heart" size="1x" className="iconHeart" /> by James
+          Made with <FontAwesomeIcon icon="heart" size="1x" className="iconHeart" /> by James Ramputh
         </div>
       </div>
 

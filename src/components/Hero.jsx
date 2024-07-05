@@ -2,10 +2,9 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./Hero.scss"
 
-const Hero = ({ contactRef, packagesRef}) => {
+const Hero = ({ scrollToRef, packagesRef}) => {
 
   const handleClickRef = (ref) => {
-    setMobileHeaderOpen(false)
     scrollToRef(ref)
   }
 
@@ -18,7 +17,6 @@ const Hero = ({ contactRef, packagesRef}) => {
         
 
         <div className="buttonContainer">
-          {/* <button className="contactButton" onClick={() => handleClickRef(contactRef)}>Contact</button> */}
           <button className="moreInformationButton" onClick={() => handleClickRef(packagesRef)}>More Information <FontAwesomeIcon icon="fa-solid fa-arrow-right" /></button>
         </div>
 
