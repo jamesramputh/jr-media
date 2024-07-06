@@ -13,7 +13,7 @@ export default async function(req, res) {
   let textContent = `${firstName} ${lastName} has inquired about a video. Package Option: ${packageOption}. Their email: ${email}. Message: ${message}.`;
   let htmlContent = `<p>${firstName} ${lastName} has inquired about a video</p><p>Package Option: ${packageOption}</p><p>Their email: ${email}</p><p>Message: ${message}</p>`;
 
-  let sendSmtpEmail = new SendSmtpEmail();
+  let sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail();
   sendSmtpEmail = {
     to: [{
       email: 'james.ramputh@gmail.com',
@@ -26,12 +26,11 @@ export default async function(req, res) {
     textContent: textContent
   };
 
-  try {
-    await apiInstance.sendTransacEmail(sendSmtpEmail);
+  apiInstance.sendTransacEmail(sendSmtpEmail).then(() => {
     res.status(200).send('Message sent successfully.');
-  } catch (error) {
+  }, (error) => {
     console.error('ERROR', error);
     res.status(400).send('Message not sent.');
-  }
+  });
 
 }
