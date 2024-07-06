@@ -42,21 +42,21 @@ if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 }
 
-const defaultClient = new ApiClient();
+const defaultClient = pkg.ApiClient.instance;
 const apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = process.env.SENDINBLUE_API_KEY;
 
-const apiInstance = new TransactionalEmailsApi();
+const apiInstance = new pkg.TransactionalEmailsApi();
 
 export default async (req, res) => {
   if (req.method === 'POST') {
     const { firstName, lastName, email, packageOption, message } = req.body;
 
     // Create text and HTML content for the email
-    let textContent = `${firstName} ${lastName} has inquired. Package Option: ${packageOption}. Their email: ${email}. Message: ${message}.`;
-    let htmlContent = `<p>${firstName} ${lastName} has inquired.</p><p>Package Option: ${packageOption}</p><p>Their email: ${email}</p><p>Message: ${message}</p>`;
+    let textContent = `${firstName} ${lastName} has inquired about a video. Package Option: ${packageOption}. Their email: ${email}. Message: ${message}.`;
+    let htmlContent = `<p>${firstName} ${lastName} has inquired about a video</p><p>Package Option: ${packageOption}</p><p>Their email: ${email}</p><p>Message: ${message}</p>`;
 
-    let sendSmtpEmail = new SendSmtpEmail();
+    let sendSmtpEmail = new pkg.SendSmtpEmail();
     sendSmtpEmail = {
       to: [{
         email: 'james.ramputh@gmail.com',
@@ -64,7 +64,7 @@ export default async (req, res) => {
       sender: {
         email: email,
       },
-      subject: `Real estate video/photo inquiry from: ${firstName} ${lastName}`,
+      subject: `Real estate video/photo Inquiry ${firstName} ${lastName}`,
       htmlContent: htmlContent,
       textContent: textContent
     };
