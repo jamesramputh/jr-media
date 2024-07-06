@@ -544,7 +544,7 @@
   resolved "https://registry.yarnpkg.com/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.18.0.tgz#5d694d345ce36b6ecf657349e03eb87297e68da4"
   integrity sha512-UOo5FdvOL0+eIVTgS4tIdbW+TtnBLWg1YBCcU2KWM7nuNwRz9bksDX1bekJJCpu25N1DVWaCwnT39dVQxzqS8g==
 
-"@sendinblue/client@^9.0.0":
+"@sendinblue/client@^3.3.1":
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/@sendinblue/client/-/client-3.3.1.tgz#6bf33689454f4fde7bee65904ae8093104bab441"
   integrity sha512-5xNGeT5gKD5XOvl5vHk682wvjJxRPnH3nc2vOZIaDX9XKuhoMaYXyEdqlP0R/Z6gEZiHhzpZxzrdiwlngGzsgw==
