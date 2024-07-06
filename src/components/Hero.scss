@@ -10,11 +10,26 @@
 
 .heroContainer {
   // height: calc( 100vh - 62px);
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
   text-align: center;
   margin-top: 62px;
+
+  &::before {
+    @media screen and ($gtDesktop){
+      content: "";
+      position: absolute;
+      top: 10px;
+      bottom: 0;
+      left: calc(50% - 0px);
+      width: 160px;
+      background-color: #192231;
+      clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+      z-index: 1;
+    }
+  }
 
   @media screen and ($gtMobile){
     grid-template-columns: 1fr;

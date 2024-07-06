@@ -88,7 +88,7 @@ const Contact = ({contactRef}) => {
             )
         ): (
           <>
-            <p className="subHeading">If you're interested, please provide the following details.</p>
+            <p className="subHeading">If you're interested, please provide the following details and we'll get back to you shortly.</p>
             
             <div className="inputGroup firstName">
               <label htmlFor="firstName" className="label">First name</label>
@@ -138,9 +138,9 @@ const Contact = ({contactRef}) => {
                 required
               >
                 <option value="" disabled>Select a package</option>
-                <option value="Photo">Photo</option>
-                <option value="Photo & Video">Photo & Video</option>
-                <option value="Photo, Video & Drone">Photo, Video & Drone</option>
+                <option value="Photo - $199">Photo - $199</option>
+                <option value="Photo & Video - $399">Photo & Video - $399</option>
+                <option value="Photo, Video & Drone - $449">Photo, Video & Drone - $449</option>
               </select>
             </div>
 

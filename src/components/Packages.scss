@@ -30,6 +30,10 @@
     h2 {
       margin: 0;
       font-size: 18px;
+
+      svg {
+        margin-left: 8px;
+      }
     }
 
     p {
@@ -52,4 +56,8 @@
   font-size: 34px;
   font-weight: 900;
   font-family: 'montserrat' , sans-serif;
+
+  .tax {
+    font-size: 12px;
+  }
 }

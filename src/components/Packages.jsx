@@ -8,25 +8,25 @@ const Packages = ({packagesRef}) => {
     <div className="packagesContainer" ref={packagesRef}>
 
       <div className="package">
-        <h2>Photos</h2>
+        <h2>Photos <FontAwesomeIcon icon="fa-solid fa-camera" /></h2>
         <p className="message">This package includes HDR photos of interior and exterior.</p>
-        <span className="price">$199</span>
+        <span className="price">$199 <span className="tax">+ HST</span></span>
         <p><FontAwesomeIcon icon="fa-solid fa-check" /> HDR Photos</p>
       </div>
 
       <div className="package">
-        <h2>Photos & Video</h2>
+        <h2>Photos & Video <FontAwesomeIcon icon="fa-solid fa-camera" /> <FontAwesomeIcon icon="fa-solid fa-video" /></h2>
         <p className="message">This package includes HDR photos of interior and exterior as well as 4K or 1080p video depending on your preference.</p>
-        <span className="price">$399</span>
+        <span className="price">$399 <span className="tax">+ HST</span></span>
         <p><FontAwesomeIcon icon="fa-solid fa-check" /> HDR Photos</p>
         <p><FontAwesomeIcon icon="fa-solid fa-check" /> 4K or 1080p Video</p>
         <p><FontAwesomeIcon icon="fa-solid fa-check" /> Social media video</p>
       </div>
 
       <div className="package">
-        <h2>Photos, Video & Drone </h2>
+        <h2>Photos, Video & Drone <FontAwesomeIcon icon="fa-solid fa-camera" /> <FontAwesomeIcon icon="fa-solid fa-video" /> <FontAwesomeIcon icon="fa-solid fa-mountain-sun" /></h2>
         <p className="message">This package includes everything that is offered in the photo and video package with the addition of aerial drone shots and video.</p>
-        <span className="price">$449</span>
+        <span className="price">$449 <span className="tax">+ HST</span></span>
         <p><FontAwesomeIcon icon="fa-solid fa-check" /> HDR Photos</p>
         <p><FontAwesomeIcon icon="fa-solid fa-check" /> 4K or 1080p Video</p>
         <p><FontAwesomeIcon icon="fa-solid fa-check" /> Social media video</p>
