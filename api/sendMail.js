@@ -7,11 +7,11 @@ apiKey.apiKey = process.env.SENDINBLUE_API_KEY;
 var apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
 
 export default async function(req, res) {
-  const { firstName, lastName, email, packageOption, message } = req.body;
+  const { firstName, lastName, email, packageOption, location, message } = req.body;
 
   // Create text and HTML content for the email
-  let textContent = `${firstName} ${lastName} has inquired for some media. Package Option: ${packageOption}. Their email: ${email}. Message: ${message}.`;
-  let htmlContent = `<p>${firstName} ${lastName} has inquired for some media.</p><p>Package Option: ${packageOption}</p><p>Their email: ${email}</p><p>Message: ${message}</p>`;
+  let textContent = `${firstName} ${lastName} has inquired for some media. Package Option: ${packageOption}. Their email: ${email}. Property Location: ${location} Message: ${message}.`;
+  let htmlContent = `<p>${firstName} ${lastName} has inquired for some media.</p><p>Package Option: ${packageOption}</p><p>Their email: ${email}</p><p>Property Location: ${location}</p><p>Message: ${message}</p>`;
 
   let sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail();
   sendSmtpEmail = {

@@ -97,8 +97,8 @@ textarea {
   grid-column: span 3; /* Takes 75% width (3 out of 4 columns) */
 }
 
-.inputGroup.packageOption {
-  grid-column: span 3; /* Takes 50% width (2 out of 4 columns) */
+.inputGroup.packageOption, .inputGroup.location {
+  grid-column: span 2; /* Takes 50% width (2 out of 4 columns) */
 }
 
 .inputGroup.message {

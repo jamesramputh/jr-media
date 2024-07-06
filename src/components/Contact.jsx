@@ -9,6 +9,7 @@ const Contact = ({contactRef}) => {
     lastName: '',
     email: '',
     packageOption: '',
+    location: '',
     message: ''
   });
 
@@ -52,6 +53,7 @@ const Contact = ({contactRef}) => {
           lastName: '',
           email: '',
           packageOption: '',
+          location: '',
           message: ''
         }); // reset form data
         setLoading(false)
@@ -142,6 +144,18 @@ const Contact = ({contactRef}) => {
                 <option value="Photo & Video - $399">Photo & Video - $399</option>
                 <option value="Photo, Video & Drone - $449">Photo, Video & Drone - $449</option>
               </select>
+            </div>
+
+            <div className="inputGroup location">
+              <label htmlFor="lastName" className="label">Property Location</label>
+              <input
+                type="text"
+                id="location"
+                name="location"
+                value={formData.location}
+                onChange={handleChange}
+                required
+              />
             </div>
 
             <div className="inputGroup message">
