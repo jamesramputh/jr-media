@@ -10,8 +10,8 @@ export default async function(req, res) {
   const { firstName, lastName, email, packageOption, message } = req.body;
 
   // Create text and HTML content for the email
-  let textContent = `${firstName} ${lastName} has inquired. Package Option: ${packageOption}. Their email: ${email}. Message: ${message}.`;
-  let htmlContent = `<p>${firstName} ${lastName} has inquired about a video</p><p>Package Option: ${packageOption}</p><p>Their email: ${email}</p><p>Message: ${message}</p>`;
+  let textContent = `${firstName} ${lastName} has inquired for some media. Package Option: ${packageOption}. Their email: ${email}. Message: ${message}.`;
+  let htmlContent = `<p>${firstName} ${lastName} has inquired for some media.</p><p>Package Option: ${packageOption}</p><p>Their email: ${email}</p><p>Message: ${message}</p>`;
 
   let sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail();
   sendSmtpEmail = {
@@ -21,7 +21,7 @@ export default async function(req, res) {
     sender: {
       email: email,
     },
-    subject: `Real estate video/photo inquiry from: ${firstName} ${lastName}`,
+    subject: `Real estate media inquiry from: ${firstName} ${lastName}`,
     htmlContent: htmlContent,
     textContent: textContent
   };
