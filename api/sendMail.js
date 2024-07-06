@@ -42,7 +42,7 @@ if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 }
 
-const defaultClient = ApiClient.instance;
+const defaultClient = new ApiClient();
 const apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = process.env.SENDINBLUE_API_KEY;
 
