@@ -35,7 +35,9 @@
 
 // }
 
-import { ApiClient, TransactionalEmailsApi, SendSmtpEmail } from '@sendinblue/client';
+import pkg from '@sendinblue/client';
+const { ApiClient, TransactionalEmailsApi, SendSmtpEmail } = pkg;
+
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 }
