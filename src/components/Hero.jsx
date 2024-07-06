@@ -12,7 +12,7 @@ const Hero = ({ scrollToRef, packagesRef}) => {
     <div className="heroContainer">
       <div className="heroContent">
         <div className="bubble"><span>HDR Videos/Photos</span> | <span>Mobile Sized Videos</span></div>
-        <h1>JR MEDIA</h1>
+        <h1>RAMPUTH MEDIA</h1>
         <p>Real Estate Photography & Videography</p>
         
 

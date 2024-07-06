@@ -21,7 +21,7 @@ const Header = ({ scrollToRef, packagesRef, contactRef}) => {
         </ul>
 
         <div className="namesContainer">
-            <span className="names">JR</span>
+            <span className="names">RM</span>
         </div>
 
         <ul className="desktopHeader">
